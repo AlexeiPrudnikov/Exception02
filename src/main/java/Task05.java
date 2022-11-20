@@ -24,8 +24,7 @@ public class Task05 {
             ObjectMapper objectMapper = new ObjectMapper();
             List<People> myPeoples = Arrays.asList(objectMapper.readValue(Paths.get("src/sample2.json").toFile(), People[].class));
             System.out.println(myPeoples);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 

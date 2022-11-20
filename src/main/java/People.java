@@ -44,10 +44,12 @@ public class People {
     public void setNumber(String number) {
         this.number = number;
     }
+
     @Override
     public String toString() {
-       return firstName + " " + lastName + ", age: " + age + ", phone: " + number + "\n";
+        return firstName + " " + lastName + ", age: " + age + ", phone: " + number + "\n";
     }
+
     public People() {
     }
 }
