@@ -46,7 +46,7 @@ public class People {
     }
     @Override
     public String toString() {
-       return firstName + " " + lastName + "; age: " + age + "; phone: " + number;
+       return firstName + " " + lastName + ", age: " + age + ", phone: " + number + "\n";
     }
     public People() {
     }
