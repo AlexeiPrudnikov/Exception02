@@ -70,7 +70,7 @@ public class Main {
         int[] abc = {1, 2};
         int index = 3;
         if (index >= abc.length) {
-            throw new IndexOutOfBoundsException("Выход за пределы массива.")
+            throw new IndexOutOfBoundsException("Выход за пределы массива.");
         }
         abc[index] = 9;
 
@@ -80,8 +80,30 @@ public class Main {
         System.out.println(a + b);
     }
 
+    // Задание № 4
+    // Разработайте программу, которая выбросит Exception, когда пользователь вводит пустую строку.
+    // Пользователю должно показаться сообщение, что пустые строки вводить нельзя.
+    public static String inputString() {
+        Scanner in;
+        String result;
+        while (true) {
+            try {
+                in = new Scanner(System.in);
+                // c in.next() ввод происходит пока не будет введено какое-то значение.
+                result = in.nextLine();
+                if (result.isEmpty()) {
+                    throw new RuntimeException("Ввод пустой строки.");
+                }
+                return result;
+            } catch (Exception ex) {
+                System.out.print("Ошибка ввода. Введите непустую строку: ");
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.print("Введите число типа float:");
-        System.out.println(inputFloat());
+        System.out.print("Введите непустую строку:");
+        System.out.println(inputString());
+
     }
 }
