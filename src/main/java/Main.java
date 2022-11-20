@@ -19,6 +19,27 @@ public class Main {
         }
     }
 
+    //Если необходимо, исправьте данный код (задание 2
+    // https://docs.google.com/document/d/17EaA1lDxzD5YigQ5OAal60fOFKVoCbEJqooB9XfhT7w/edit)
+    //    try {
+    //        int d = 0;
+    //        double catchedRes1 = intArray[8] / d;
+    //        System.out.println("catchedRes1 = " + catchedRes1);
+    //    } catch (ArithmeticException e) {
+    //        System.out.println("Catching exception: " + e);
+    //    }
+    public static void task02(int[] intArray, int index, int d) {
+        if (d == 0) {
+            throw new ArithmeticException("Деление на 0");
+        }
+        if (index >= intArray.length) {
+            throw new IndexOutOfBoundsException();
+        }
+        double catchedRes1 = intArray[index] / d;
+        System.out.println(catchedRes1);
+
+    }
+
     public static void main(String[] args) {
         System.out.print("Введите число типа float:");
         System.out.println(inputFloat());
